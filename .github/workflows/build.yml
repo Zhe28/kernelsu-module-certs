@@ -13,8 +13,8 @@ jobs:
     steps:
       - name: checkout
         uses: actions/checkout@v2
-      - name: delete .git directory
-        run: sudo rm -rf .git
+      - name: delete useless directory
+        run: sudo rm -rf .git .github
       - name: upload original file
         uses: actions/upload-artifact@v4
         with:
