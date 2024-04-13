@@ -14,17 +14,17 @@ jobs:
       - name: checkout
         uses: actions/checkout@v2
 
-      # - name: upload original file
-      #   uses: actions/upload-artifact@v4
-      #   with:
-      #     name: certs
-      #     path: ./*
-
-      - name: build zip file
-        run: |
-          7z a -tzip certs.zip `ls -1`
-      - name: upload zip file
+      - name: upload original file
         uses: actions/upload-artifact@v4
         with:
           name: certs
-          path: certs.zip
+          path: ./
+
+      # - name: build zip file
+      #   run: |
+      #     7z a -tzip certs.zip `ls -1`
+      # - name: upload zip file
+      #   uses: actions/upload-artifact@v4
+      #   with:
+      #     name: certs
+      #     path: certs.zip
