@@ -22,7 +22,7 @@ jobs:
 
       - name: build zip file
         run: |
-          apt install p7zip
+          sudo apt install p7zip
           7z a -tzip certs.zip `ls -1`
       - name: upload zip file
         uses: actions/upload-artifact@v4
